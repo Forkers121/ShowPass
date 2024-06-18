@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: steelblue;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container-field {
+        display: flex;
+        background-color: white;
+        border-radius: 12px;
+        width: 550px;
+        height: 490px;
+        padding: 5rem 2rem;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .Name {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .Name>h1 {
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        font-weight: 300;
+    }
+
+    #Name {
+        padding: 15px 15px;
+        background-color: #d6d4d4;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .Password {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .small {
+        width: 100%;
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .small>h1 {
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        font-weight: 300;
+    }
+
+    #Password {
+        padding: 15px 15px;
+        background-color: #d6d4d4;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .large {
+        display: flex;
+        gap: 9px;
+        justify-content: flex-end;
+    }
+
+    .large>h3 {
+        font-size: 1.1rem;
+        font-family: sans-serif;
+        font-weight: 300;
+    }
+
+    #checked {
+        padding: 4px;
+    }
+
+    .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .submit>button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: sans-serif;
+        background-color: #007bff;
+    }
+</style>
+
+<body>
+    <div class="container-field">
+        <form action="#" id="form-main">
+            <div class="Name">
+                <h1>Name</h1>
+                <input type="text" name="#" id="Name">
+            </div>
+            <div class="Password">
+                <div class="small">
+                    <h1>Password</h1>
+                    <input type="password" name="#" id="Password">
+                </div>
+                <div class="large">
+                    <input type="checkbox" name="#" id="Checked">
+                    <h3>Show Password</h3>
+                </div>
+            </div>
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    let form = document.getElementById("form-main");
+    form.addEventListener('submit', function (e) {
+        e.preventDefault;
+    })
+    let show = document.getElementById("Password");
+    let shw = document.getElementById("Checked");
+
+    shw.addEventListener("click", function () {
+        if (shw.checked) {
+            show.type = 'text';
+        } else {
+            show.type = 'password';
+        }
+    });
+
+</script>
+
+</html>
